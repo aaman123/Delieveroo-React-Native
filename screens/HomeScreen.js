@@ -36,7 +36,7 @@ const HomeScreen = () => {
         ...,
         restaurants[] -> {
           ...,
-          dishes[] -> {
+          dish[] -> {
             ...
           }
         }
@@ -49,8 +49,6 @@ const HomeScreen = () => {
 
     fetchRestaurants();
   }, []);
-
-  console.log(featuredCategories);
 
   return (
     <SafeAreaView className="bg-white pt-5">
@@ -95,14 +93,6 @@ const HomeScreen = () => {
             />
           );
         })}
-        {/* <Featured
-          title="Tasty Discounts"
-          description="Everyone's been enjoying these juicy discounts."
-        />
-        <Featured
-          title="Offers Near You"
-          description="Why not support your local restaurants tonight!"
-        /> */}
       </ScrollView>
     </SafeAreaView>
   );

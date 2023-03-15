@@ -39,13 +39,6 @@ const Categories = () => {
           />
         );
       })}
-      {/* <CategoryCard title="Pizza" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Thai" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Indian" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Mexican" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Chinese" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Chinese" imgUrl="https://links.papareact.com/gn7" />
-      <CategoryCard title="Chinese" imgUrl="https://links.papareact.com/gn7" /> */}
     </ScrollView>
   );
 };

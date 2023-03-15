@@ -61,8 +61,8 @@ const Restaurant = {
       name: 'dish',
       title: 'Dishes',
       validation: (Rule: Rule) => Rule.required(),
-      type: 'reference',
-      to: [{type: 'dish'}],
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'dish'}]}],
     },
   ],
 }

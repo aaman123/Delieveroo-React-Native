@@ -28,6 +28,8 @@ const Featured = ({ title, description, restaurants }) => {
               genre={restaurant.genre}
               address={restaurant.address}
               rating={restaurant.rating}
+              short_description={restaurant.short_description}
+              dishes={restaurant.dish}
             />
           );
         })}
