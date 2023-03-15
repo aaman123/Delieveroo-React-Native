@@ -2,7 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./RestaurantCard";
 
-const Featured = ({ title, description }) => {
+const Featured = ({ title, description, restaurants }) => {
   return (
     <View className="m-4">
       <View className="flex-row justify-between items-center">
@@ -19,30 +19,18 @@ const Featured = ({ title, description }) => {
         showsHorizontalScrollIndicator={false}
         className="pt-5"
       >
-        <RestaurantCard
-          title="Nando's"
-          imgUrl="https://links.papareact.com/gn7"
-          genre="Japanese"
-          address="123 Main Street"
-        />
-        <RestaurantCard
-          title="Nando's"
-          imgUrl="https://links.papareact.com/gn7"
-          genre="Japanese"
-          address="123 Main Street"
-        />
-        <RestaurantCard
-          title="Nando's"
-          imgUrl="https://links.papareact.com/gn7"
-          genre="Japanese"
-          address="123 Main Street"
-        />
-        <RestaurantCard
-          title="Nando's"
-          imgUrl="https://links.papareact.com/gn7"
-          genre="Japanese"
-          address="123 Main Street"
-        />
+        {restaurants?.map((restaurant) => {
+          return (
+            <RestaurantCard
+              key={restaurant._id}
+              title={restaurant.name}
+              imgUrl={restaurant.image}
+              genre={restaurant.genre}
+              address={restaurant.address}
+              rating={restaurant.rating}
+            />
+          );
+        })}
       </ScrollView>
     </View>
   );
