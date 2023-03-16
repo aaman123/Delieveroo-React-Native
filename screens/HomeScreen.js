@@ -79,7 +79,12 @@ const HomeScreen = () => {
         <AdjustmentsVerticalIcon size={30} color="#00CCBB" />
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingBottom: 150,
+        }}
+      >
         <Categories />
 
         {featuredCategories?.map((category) => {
